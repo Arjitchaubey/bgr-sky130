@@ -1,0 +1,15 @@
+* Vertical PNP: VBE vs temperature at fixed emitter current
+.lib $PDK_ROOT/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+* pins: Collector Base Emitter
+XQ1 0 0 e sky130_fd_pr__pnp_05v5_W3p40L3p40
+IE 0 e DC 5u
+
+.control
+dc temp -40 125 5
+let vbe = v(e)
+wrdata results/pnp_vbe_vs_temp.csv vbe
+echo "Simulation done"
+quit
+.endc
+.end

@@ -1,0 +1,1 @@
+open_pdks commit: 792ef67037d74c8c51811eab3ce23cf793491296 (2026.10.19)

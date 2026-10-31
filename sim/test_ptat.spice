@@ -1,0 +1,24 @@
+* Delta VBE: 1x PNP vs 8x PNP at equal emitter current
+.lib $PDK_ROOT/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+* pins: Collector Base Emitter
+XQ1  0 0 e1 sky130_fd_pr__pnp_05v5_W3p40L3p40
+XQ2a 0 0 e2 sky130_fd_pr__pnp_05v5_W3p40L3p40
+XQ2b 0 0 e2 sky130_fd_pr__pnp_05v5_W3p40L3p40
+XQ2c 0 0 e2 sky130_fd_pr__pnp_05v5_W3p40L3p40
+XQ2d 0 0 e2 sky130_fd_pr__pnp_05v5_W3p40L3p40
+XQ2e 0 0 e2 sky130_fd_pr__pnp_05v5_W3p40L3p40
+XQ2f 0 0 e2 sky130_fd_pr__pnp_05v5_W3p40L3p40
+XQ2g 0 0 e2 sky130_fd_pr__pnp_05v5_W3p40L3p40
+XQ2h 0 0 e2 sky130_fd_pr__pnp_05v5_W3p40L3p40
+I1 0 e1 DC 5u
+I2 0 e2 DC 5u
+
+.control
+dc temp -40 125 5
+let dvbe = v(e1) - v(e2)
+wrdata results/ptat_dvbe_vs_temp.csv dvbe
+echo "Simulation done"
+quit
+.endc
+.end
