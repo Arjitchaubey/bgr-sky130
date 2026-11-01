@@ -27,7 +27,7 @@ Conditions are given in every row. No formal targets were fixed in advance excep
 | Quiescent current | 13.51 uA (27 C), 19.93 uA (125 C) | tt, VDD 1.8 V |
 | Line regulation | -0.099 / 0.020 / 0.160 mV/V | tt, 1.62-1.98 V, at -40 / 27 / 125 C |
 | Line regulation, all corners | within +-0.23 mV/V, except sf at -40 C: -0.356 mV/V | 7 corners, end points only |
-| Min VDD, Vref within 0.5% | 1.26-1.30 V | tt (step 6c) |
+| Min VDD, Vref within 0.5% | 1.26-1.30 V at 27 and 125 C; about 1.46 V at -40 C (read from the plot, estimate) | tt (step 6c); at -40 C Vref overshoots to about 1.33 V near VDD = 1.36 V |
 | Vref over 7 corners, -40..125 C | 1.2011-1.2159 V | ratio frozen at tt value |
 | Loop phase margin | 61.4-65.3 deg | 5 corners x 3 temps, C1 20 pF, CL 10 pF, VDD 1.8 V; worst ff at -40 C |
 | Loop gain margin | 25.8-27.3 dB | same; unity-gain freq 0.129-0.157 MHz |
@@ -50,7 +50,7 @@ Conditions are given in every row. No formal targets were fixed in advance excep
 
 ![step6c_temp.png](docs/img/step6c_temp.png)
 
-**Vref vs supply, tt (step 6c).**
+**Vref vs VDD at -40 / 27 / 125 C (step 6c). At -40 C Vref overshoots to about 1.33 V near VDD = 1.36 V before settling (read from the plot); all three curves are flat at 1.8 V.**
 
 ![step6c_supply.png](docs/img/step6c_supply.png)
 
@@ -62,15 +62,15 @@ Conditions are given in every row. No formal targets were fixed in advance excep
 
 ![step7d_ratio_sweep.png](docs/img/step7d_ratio_sweep.png)
 
-**Loop-gain results over corners and temperatures, C1 = 20 pF, CL = 10 pF (step 7e).**
+**Loop gain over corners and temperatures, C1 = 20 pF, CL = 10 pF (step 7e). 15 curves; the plot's color cycle repeats, so individual curves cannot be told apart, but they lie close together.**
 
 ![step7e_pm_corners.png](docs/img/step7e_pm_corners.png)
 
-**Cold (-40 C) 1 ms-ramp startup, showing the plateau and recovery (step 7b).**
+**-40 C, 1 ms ramp, tt (left) and ss (right), clamp-diode width W = 2 / 4 / 8 (step 7b). Vref jumps to about 0.7 V, sits on a plateau, then recovers to 1.2 V; wider clamp diodes recover later.**
 
 ![step7b_cold_startup.png](docs/img/step7b_cold_startup.png)
 
-**Sensitivity-based Monte Carlo, tt, assumed AVT (step 8b).**
+**Sensitivity-based Monte Carlo, tt, assumed AVT = 5 mV*um (step 8b). Untrimmed versus 4-bit and 6-bit ratio-only Vref trim: Vref tightens but TC spreads (p99 71.9 ppm/C for 6-bit), the failure that led to offset-then-ratio trim (strategy c, in the table below, not plotted).**
 
 ![step8b_montecarlo.png](docs/img/step8b_montecarlo.png)
 
@@ -108,6 +108,7 @@ Untrimmed Vref sigma is 7.15 / 11.86 / 18.95 mV at AVT = 3 / 5 / 8; strategy c g
 - Cold slow-ramp startup delay of several hundred us with unknown mechanism. Startup at ff/sf/fs only at -40 C; not tested at 27/125 C, for the 10 us ramp at those corners, for ramps slower than 1 ms, or with process and R/C corners combined.
 - High noise (about 109 uVrms in 0.1-10 Hz at 27 C), mostly 1/f. The likely source (OTA input pair and load, gained about 11x) is a hypothesis; noise was not split by device.
 - Load regulation slope grows strongly with temperature (-54.6 mV/mA at 125 C). Output impedance was not measured separately.
+- The DC supply sweep at -40 C overshoots to about 1.33 V near VDD = 1.36 V (read from the plot). Vref is correct at 1.8 V and above about 1.46 V, but the low-supply behaviour at cold is not a clean monotonic rise.
 - PSRR measured only at tt, 27 C, CL = 1 pF. No line or load transients.
 - No layout, no parasitic extraction, no DRC/LVS.
 - Monte Carlo is sensitivity-based with assumed AVT and load-offset weighting; no combined corner + mismatch; trim hardware not designed.
