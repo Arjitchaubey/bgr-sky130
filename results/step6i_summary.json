@@ -1,0 +1,101 @@
+[
+  {
+    "variant": "C",
+    "T": -40,
+    "ramp": "1u",
+    "started": true,
+    "final": 1.2085792,
+    "peak": 1.2085792,
+    "overshoot_mV": 0.0,
+    "g_min": -4.07131436e-21,
+    "settle_us": 10.4212102
+  },
+  {
+    "variant": "C",
+    "T": -40,
+    "ramp": "10u",
+    "started": true,
+    "final": 1.2085792,
+    "peak": 1.2085792,
+    "overshoot_mV": 0.0,
+    "g_min": -4.07131436e-21,
+    "settle_us": 18.6723833
+  },
+  {
+    "variant": "C",
+    "T": -40,
+    "ramp": "1m",
+    "started": true,
+    "final": 1.2085792,
+    "peak": 1.20857921,
+    "overshoot_mV": 9.99999993922529e-06,
+    "g_min": -4.07131436e-21,
+    "settle_us": 1349.45989
+  },
+  {
+    "variant": "C",
+    "T": 27,
+    "ramp": "1u",
+    "started": true,
+    "final": 1.21097784,
+    "peak": 1.21097784,
+    "overshoot_mV": 0.0,
+    "g_min": -3.75308409e-18,
+    "settle_us": 7.73487468
+  },
+  {
+    "variant": "C",
+    "T": 27,
+    "ramp": "10u",
+    "started": true,
+    "final": 1.21097785,
+    "peak": 1.21097785,
+    "overshoot_mV": 0.0,
+    "g_min": -3.75308409e-18,
+    "settle_us": 15.784020499999999
+  },
+  {
+    "variant": "C",
+    "T": 27,
+    "ramp": "1m",
+    "started": true,
+    "final": 1.21097785,
+    "peak": 1.210978,
+    "overshoot_mV": 0.00015000000019860238,
+    "g_min": -3.75308409e-18,
+    "settle_us": 1115.7847100000001
+  },
+  {
+    "variant": "C",
+    "T": 125,
+    "ramp": "1u",
+    "started": true,
+    "final": 1.20790193,
+    "peak": 1.20790193,
+    "overshoot_mV": 0.0,
+    "g_min": 5.10101989e-19,
+    "settle_us": 7.77128794
+  },
+  {
+    "variant": "C",
+    "T": 125,
+    "ramp": "10u",
+    "started": true,
+    "final": 1.20790193,
+    "peak": 1.20790193,
+    "overshoot_mV": 0.0,
+    "g_min": 5.10101989e-19,
+    "settle_us": 15.6141967
+  },
+  {
+    "variant": "C",
+    "T": 125,
+    "ramp": "1m",
+    "started": true,
+    "final": 1.20790193,
+    "peak": 1.20813072,
+    "overshoot_mV": 0.22878999999997873,
+    "g_min": 5.10101989e-19,
+    "settle_us": 770.070162
+  }
+]

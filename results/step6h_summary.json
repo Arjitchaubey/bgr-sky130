@@ -1,0 +1,90 @@
+[
+  {
+    "variant": "A",
+    "T": -40,
+    "ramp": "1u",
+    "started": true,
+    "final": 1.20857919,
+    "peak": 1.78132164,
+    "overshoot_mV": 572.74245,
+    "g_min": -1.29110091e-19,
+    "settle_us": 3.99720842
+  },
+  {
+    "variant": "A",
+    "T": -40,
+    "ramp": "10u",
+    "started": true,
+    "final": 1.2085792,
+    "peak": 1.45531883,
+    "overshoot_mV": 246.73962999999998,
+    "g_min": -1.29110091e-19,
+    "settle_us": 10.88497
+  },
+  {
+    "variant": "B",
+    "T": -40,
+    "ramp": "1u",
+    "started": true,
+    "final": 1.20857919,
+    "peak": 1.76489552,
+    "overshoot_mV": 556.31633,
+    "g_min": -3.93688915e-19,
+    "settle_us": 4.25610013
+  },
+  {
+    "variant": "B",
+    "T": -40,
+    "ramp": "10u",
+    "started": true,
+    "final": 1.2085792,
+    "peak": 1.49524729,
+    "overshoot_mV": 286.66809000000006,
+    "g_min": -3.93688915e-19,
+    "settle_us": 11.126308700000001
+  },
+  {
+    "variant": "C",
+    "T": -40,
+    "ramp": "1u",
+    "started": true,
+    "final": 1.2085792,
+    "peak": 1.2085792,
+    "overshoot_mV": 0.0,
+    "g_min": -4.07131436e-21,
+    "settle_us": 10.4212102
+  },
+  {
+    "variant": "C",
+    "T": -40,
+    "ramp": "10u",
+    "started": true,
+    "final": 1.2085792,
+    "peak": 1.2085792,
+    "overshoot_mV": 0.0,
+    "g_min": -4.07131436e-21,
+    "settle_us": 18.6723833
+  },
+  {
+    "variant": "D",
+    "T": -40,
+    "ramp": "1u",
+    "started": true,
+    "final": 1.2085792,
+    "peak": 1.78055953,
+    "overshoot_mV": 571.98033,
+    "g_min": 3.03129791e-19,
+    "settle_us": 3.99172244
+  },
+  {
+    "variant": "D",
+    "T": -40,
+    "ramp": "10u",
+    "started": true,
+    "final": 1.2085792,
+    "peak": 1.46020353,
+    "overshoot_mV": 251.62433000000007,
+    "g_min": 3.03129791e-19,
+    "settle_us": 10.9314499
+  }
+]
