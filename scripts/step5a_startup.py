@@ -26,6 +26,7 @@ def netlist(vddline, nodeset, startup, temp, analysis):
           "v(g)=0.72 v(n1)=0.73 v(tail)=0.2 v(vbn)=0.55 v(sn)=0") if nodeset else ""
     return f"""* BGR step 5a
 .lib $PDK_ROOT/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.options reltol=1e-6 vntol=1e-9 abstol=1e-14
 .temp {temp}
 {vddline}
 XQ1 0 0 a {Q}

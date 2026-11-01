@@ -18,6 +18,7 @@ q2 = "\n".join(f"XQ2{i} 0 0 e2 {Q}" for i in "abcdefgh")
 
 NET = f"""* BGR with NMOS-input OTA, PMOS mirror load, PMOS pass device
 .lib $PDK_ROOT/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.options reltol=1e-6 vntol=1e-9 abstol=1e-14
 VDD vdd 0 {VDD}
 XQ1 0 0 a {Q}
 {q2}
